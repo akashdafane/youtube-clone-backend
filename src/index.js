@@ -8,6 +8,21 @@ dotenv.config({
   path: "./env",
 });
 
+// const uri =
+//   "mongodb+srv://manu:Testing1234@cluster0.h2w23ta.mongodb.net/test?retryWrites=true&w=majority";
+// const clientOptions = {
+//   serverApi: { version: "1", strict: true, deprecationErrors: true },
+// };
+// mongoose
+//   .connect(uri, clientOptions)
+//   .then(() => {
+//     console.log("Database connected successfully");
+//     app.listen(PORT);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
 connectDB()
   .then(() => {
     app.listen(process.env.PORT || 8000, () => {
